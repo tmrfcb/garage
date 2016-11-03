@@ -1,0 +1,30 @@
+{
+  "id": 0,
+  "Name": "Garage of Vence",
+  "levels": [
+    {
+      "level": 1,
+      "label":"Level 1",
+      "id": 0,
+      "nb_slot": 22
+    },
+    {
+      "level": 2,
+      "label":"Level 2",
+      "id": 1,
+      "nb_slot": 18
+    },
+    {
+      "level": 3,
+      "label":"Level 3",
+      "id": 2,
+      "nb_slot": 22
+    },
+    {
+      "level": 4,
+      "label":"Level 4",
+      "id": 3,
+      "nb_slot": 20
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+[
+  {
+    "licensePlate" : "M-X 197",
+    "id":0,
+    "type":"Car",
+    "label" :"Car",
+    "level":1,
+    "slot":16
+  },
+  {
+    "licensePlate" : "B-B 22",
+    "id":1,
+    "type":"Car",
+    "label" :"Car",
+    "level":1,
+    "slot":5
+
+  },
+  {
+    "licensePlate" : "CH-R 142",
+    "id":2,
+    "type":"Motorbike",
+    "label" :"Motorbike",
+    "level":2,
+    "slot":6
+
+  },
+  {
+    "licensePlate" : "Y-X 213",
+    "id":3,
+    "type":"Motorbike",
+    "label" :"Moto",
+    "level":1,
+    "slot":23
+
+  },
+  {
+    "licensePlate" : "C-VV 146",
+    "id":4,
+    "type":"Car",
+    "label" :"Car",
+    "level":2,
+    "slot":11
+
+  },
+  {
+    "licensePlate" : "B-H 209",
+    "id":5,
+    "type":"Motorbike",
+    "label" :"Motorbike",
+    "level":3,
+    "slot":7
+
+  },
+  {
+    "licensePlate" : "G-GH 67",
+    "id":6,
+    "type":"Car",
+    "label" :"Car",
+    "level":2,
+    "slot":14
+
+  },
+  {
+    "licensePlate" : "B-U 5",
+    "id":7,
+    "type":"Car",
+    "label" :"Car",
+    "level":2,
+    "slot":9
+  },
+  {
+    "licensePlate" : "N-J 47",
+    "id":8,
+    "type":"Motorbike",
+    "label" :"Moto",
+    "level":1,
+    "slot":3
+
+  },
+  {
+    "licensePlate" : "Y-O 55",
+    "id":9,
+    "type":"Car",
+    "label" :"Car",
+    "level":1,
+    "slot":18
+
+  },
+  {
+    "licensePlate" : "T-RU 23",
+    "id":10,
+    "type":"Car",
+    "label" :"Car",
+    "level":2,
+    "slot":2
+
+  },
+  {
+    "licensePlate" : "F-DS 76",
+    "id":11,
+    "type":"Motorbike",
+    "label" :"Motorbike",
+    "level":1,
+    "slot":6
+
+  },
+  {
+    "licensePlate" : "Y-MO 34",
+    "id":12,
+    "type":"Motorbike",
+    "label" :"Moto",
+    "level":3,
+    "slot":21
+
+  },
+  {
+    "licensePlate" : "A-AA 16",
+    "id":13,
+    "type":"Car",
+    "label" :"Car",
+    "level":3,
+    "slot":2
+
+  }
+]

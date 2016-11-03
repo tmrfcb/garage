@@ -1,0 +1,469 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    border-top: 20px solid rgb(49, 50, 51);
+    font-family: 'Gentium Book Basic', serif;
+}
+
+.container {
+    width: 100%;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #888;
+    text-transform: uppercase;
+}
+
+h2 {
+    color: #888;
+}
+
+i.icon {
+    margin-right: 10px;
+    color: rgb(24, 142, 221);
+}
+
+a.reset {
+    float: right;
+}
+
+a[disabled="disabled"] {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/*Menu style*/
+nav {
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+nav ul#menu {
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+
+    position: static;
+    display: none;
+    float: none;
+}
+
+nav ul#menu li {
+    display: inline-block;
+    float: left;
+    margin-right: 1px;
+
+    margin-bottom: 1px;
+    width: 100%;
+
+}
+
+nav ul#menu li a {
+    display: block;
+    padding: 30px 20px;
+    text-align: center;
+    color: #222;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+nav ul#menu li:hover a, nav ul#menu li a.active {
+    background: rgba(0, 0, 0, 0.15);
+}
+
+nav .show-menu {
+    text-decoration: none;
+    color: #fff;
+    background: rgb(24, 142, 221);
+    text-align: center;
+    padding: 10px 0;
+    display: block;
+}
+
+nav input#show-menu {
+    display: none;
+}
+
+nav input#show-menu:checked ~ #menu {
+    display: block;
+}
+
+/*Form style*/
+form > div {
+    clear: both;
+    padding: 1px;
+
+    margin: 0 0 15px 0;
+}
+
+form .required {
+    float: right;
+    color: #e22f2f;
+}
+
+button[disabled="disabled"] {
+    opacity: 0.5;
+}
+
+form > h2, form > div > fieldset label {
+    text-transform: uppercase;
+}
+
+form > div > fieldset label:not(.radioLabel) {
+    font-size: 90%;
+    font-weight: bold;
+    width: 100%;
+    float: left;
+    padding-right: 10px;
+    margin: 0 0 5px 0;
+}
+
+form > div > fieldset > div > div {
+    width: 100%;
+    float: none;
+}
+
+fieldset {
+    border: 0;
+    padding: 0;
+}
+
+fieldset > div {
+    margin-bottom: 10px;
+    float: left;
+    width: 100%;
+}
+
+input[type=text], input[type=email], input[type=url], input[type=password] {
+    width: 100%;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+textarea {
+    width: 100%;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+input[type=text], input[type=email], input[type=url], input[type=password] {
+    width: 100%;
+    padding: 5px 10px
+}
+
+select {
+    width: 100%;
+    padding: 5px 10px
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=url]:focus, input[type=password]:focus {
+    outline: 0;
+    border-color: #4697e4;
+}
+
+[type=submit] {
+    padding: 5px 10px;
+    float: right;
+}
+
+textarea:focus {
+    outline: 0;
+    border-color: #4697e4;
+}
+
+/*list of vehicles*/
+#list-vehicle {
+    display: table;
+    width: 100%;
+}
+
+#list-vehicle > * {
+    display: table-row;
+}
+
+#list-vehicle > * > * {
+    display: table-cell;
+    padding: 5px;
+}
+
+#list-vehicle-wp {
+    overflow-x: scroll;
+}
+
+#vehicles, #parking {
+    margin: 0;
+    padding: 0
+}
+
+#vehicles li, #parking li {
+    background: rgba(0, 0, 0, 0.15);
+    list-style: none;
+    padding: 5px;
+    margin-bottom: 5px;
+    float: left;
+    width: 100%;
+}
+
+#parking li {
+    padding: 10px;
+}
+#parking .add   {
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+#parking .add input[type="number"] {
+    width:30%
+}
+#vehicles li .license-plate, #parking li .level {
+    float: left;
+    width: 50%
+}
+
+li .action {
+    float: left;
+    width: 100%;
+    text-align: right;
+}
+
+li .action .delete,
+li .action .cancel {
+    color: #a94442;
+    cursor: pointer;
+    text-decoration: underline;
+}
+li .action .delete[disabled="disabled"] {
+    pointer-events:none;
+    opacity: 0.5;
+}
+
+li .action .message {
+    color: rgb(24, 142, 221);
+    padding-right: 10px;
+}
+
+li .action .delete:hover,
+li .action .cancel:hover {
+    text-decoration: none;
+}
+
+#vehicles li .level, #parking li .slots {
+    float: right;
+    width: 50%;
+    text-align: right;
+}
+
+#vehicles li .type-vehicule {
+    float: left;
+    width: 50%
+}
+
+#vehicles li .slot {
+    float: right;
+    width: 50%;
+    text-align: right;
+}
+
+.pagination-top .total {
+    color: #888;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.pagination-top sup {
+    right: -16px;
+}
+
+.pagination-top a {
+    font-size: 25px
+}
+
+.pagination-top a:hover,
+.pagination-top a:active,
+.pagination-top a.active {
+    color: #3b5998
+}
+
+.pagination-bottom ul {
+    display: inline-block;
+    padding: 0;
+}
+
+.pagination-bottom > a {
+    font-size: 25px;
+    position: relative;
+    top: 3px
+}
+
+.pagination-bottom > a:hover,
+.pagination-bottom > a:active,
+.pagination-bottom > a.active {
+    color: #3b5998
+}
+
+.pagination-bottom ul li {
+    display: inline-block;
+}
+
+.pagination-bottom ul li a {
+    color: #222;
+    text-decoration: none
+}
+
+.pagination-bottom ul li a:hover,
+.pagination-bottom ul li a:active,
+.pagination-bottom ul li a.active {
+    color: #3b5998
+}
+
+#vehicle-section-body {
+    margin-top: 15px
+}
+
+.field-search {
+    position: relative;
+}
+
+#search {
+    padding-left: 20px
+}
+
+.field-search i {
+    position: absolute;
+    left: 5px;
+    top: 7px
+}
+
+#vehicle-filter ul {
+    list-style: none;
+    padding: 0
+}
+
+#vehicle-filter > ul ul {
+    padding-left: 10px;
+    margin-bottom: 10px
+}
+
+#vehicle-filter > ul ul a {
+    text-decoration: none;
+    color: #c7254e
+}
+
+@media (min-width: 600px) {
+    #list-vehicle-wp {
+        float: right;
+        width: 65%
+    }
+
+    #vehicle-filter {
+        float: left;
+        width: 25%
+    }
+
+    .container {
+        width: 75%;
+        padding: 0;
+    }
+
+    nav ul#menu {
+        float: left;
+        display: block;
+        position: relative;
+    }
+
+    nav ul#menu li {
+        width: inherit;
+        margin-bottom: 0;
+    }
+
+    nav ul#menu li a {
+        width: inherit;
+    }
+
+    nav .show-menu {
+        display: none;
+    }
+
+    form > div {
+        margin: 0 0 10px 0;
+    }
+
+    form > div > fieldset label:not(.radioLabel) {
+        width: 25%;
+    }
+
+    form > div > fieldset > div > div {
+        width: 75%;
+        float: right;
+    }
+
+    #list-vehicle-wp {
+        overflow-x: initial;
+    }
+
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+
+.alert-info {
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+
+.alert-warning {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+/* start commented backslash hack \*/
+* html .clearfix {
+    height: 1%;
+}
+
+.clearfix {
+    display: block;
+}
+
+/* close commented backslash hack */
