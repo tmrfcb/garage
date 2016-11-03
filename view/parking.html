@@ -1,0 +1,45 @@
+
+<div class="container">
+    <flash-message duration="3000" show-close="true" on-dismiss="myCallback(flash);"></flash-message>
+    <h2>NAME :</h2>
+    <div>
+        <input type="text" ng-model="parking.Name" />
+    </div>
+
+    <div id="parking-section-body">
+        <h2>LEVELS LIST :</h2>
+        <ul id="parking" class="clearfix">
+            <li ng-repeat="level in parking.levels | orderBy : 'level'">
+                <div class="level">{{level.label}}</div>
+                <div class="slots">Slots: <span>{{level.nb_slot}}</span></div>
+                <div class="level">{{occupied[level.level].length > 0 ? occupied[level.level].length+' Vehicles' : 'Empty'}}</div>
+                <div class="slots">
+                    <div class="action">
+                        <span class="delete" ng-hide="confirmLevel[level.level]" ng-click="confirmLevel[level.level] = true" ng-disabled="occupied[level.level].length > 0" >Delete</span>
+                        <span class="message" ng-show="confirmLevel[level.level]" >are you sure you want to delete ? </span>
+                        <span class="delete" ng-show="confirmLevel[level.level]" ng-click="levelDelete(level.level);confirmLevel[level.level] = false"> Ok </span>
+                        <span ng-show="confirmLevel[level.level]" > &nbsp;&nbsp; </span>
+                        <span class="cancel" ng-show="confirmLevel[level.level]" ng-click="confirmLevel[level.level] = false"> Cancel </span>
+
+                    </div>
+                    
+                </div>
+            </li>
+            <li class="add" ng-show="showFormAddLevel">
+                    <div class="level">Level {{parking.levels[parking.levels.length -1].level+1}}</div>
+                    <div class="slots"><form name="levelForm" novalidate>
+                        <input name="parkingSlot" type="number" ng-model="newLevel.nb_slot" placeholder="Slots Number .." required />
+                        <br>
+                        <div class="required" ng-show="levelForm.parkingSlot.$touched && levelForm.parkingSlot.$invalid">The slots Number  is required.</div>
+                    </form></div>
+            </li>
+        </ul>
+        <div>
+            <button type="submit"  ng-click="showFormAddLevel = true" ng-hide="showFormAddLevel"><i class="fa fa-plus-square icon" aria-hidden="true"></i> ADD Level </button>
+            <button type="submit" ng-disabled="levelForm.$invalid"  ng-click="addLevel();showFormAddLevel = false;levelForm.$setUntouched();" ng-show="showFormAddLevel"><i class="fa fa-floppy-o icon" aria-hidden="true"></i> Save </button>
+        </div>
+
+
+
+    </div>
+ </div>

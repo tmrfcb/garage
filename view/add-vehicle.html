@@ -1,0 +1,64 @@
+<div class="container">
+    <div id="vehicle-container">
+        <form id="new-vehicle"  name="vehicleForm"  novalidate >
+            <flash-message duration="3000" show-close="true" on-dismiss="myCallback(flash);"></flash-message>
+            <h2 id="title-form-vehicle">Vehicle :</h2>
+            <div>
+                <fieldset>
+                    <div>
+                        <label for="license-plate">Vehicle's license plate</label>
+                        <div><input id="license-plate" name="licensePlate" type="text" ng-model="vehicle.licensePlate" required /></div>
+                        <div class="required" ng-show="vehicleForm.licensePlate.$touched && vehicleForm.licensePlate.$invalid">The License Plate is required.</div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div>
+                        <label for="typevehicle">
+                            Vehicles's type
+                        </label>
+                        <div>
+                            <select required="true" id="typevehicle" name="typevehicle" ng-model="vehicle.type">
+                                <option value="">Choose a type</option>
+                                <option value="Car">Car</option>
+                                <option value="Motorbike">Motorbike</option>
+                            </select>
+                        </div>
+                        <div class="required" ng-show="vehicleForm.typevehicle.$touched && vehicleForm.typevehicle.$invalid">The Type is required.</div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div>
+                        <label for="level">
+                            Level
+                        </label>
+                        <div>
+                            <select required="true" id="level" ng-model="vehicle.level" name="vehicleLevel">
+                                <option value="">Choose level</option>
+                                <option ng-repeat="level in availableLevels" value="{{level.level}}">level {{level.level}}</option>
+                            </select>
+                        </div>
+                        <div class="required" ng-show="vehicleForm.vehicleLevel.$touched && vehicleForm.vehicleLevel.$invalid">The Level is required.</div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div>
+                        <label for="slot">
+                            Slot
+                        </label>
+                        <div>
+                            <select required="true" id="slot" ng-model="vehicle.slot" name="vehicleSlot">
+                                <option value="">Choose slot</option>
+                                <option ng-repeat="slot in slots[vehicle.level]" value="{{slot}}">slot {{slot}}</option>
+                            </select>
+                        </div>
+                        <div class="required" ng-show="vehicleForm.vehicleSlot.$touched && vehicleForm.vehicleSlot.$invalid">The slot is required.</div>
+                    </div>
+                </fieldset>
+                <input type="hidden" id="vehicle-id" ng-model="vehicle.id" value="{{vehicles.length+1}}">
+                <input type="hidden" id="vehicle-label" ng-model="vehicle.label" value="{{vehicle.type}}">
+                <input type="hidden" id="valid" ng-model="vehicleValid" value="{{vehicleForm}}">
+                <button type="submit" id="save" ng-disabled="vehicleForm.$invalid" ng-click="addVehicle();vehicleForm.$setUntouched();"><i class="fa fa-plus-square icon" aria-hidden="true"></i> ADD </button>
+            </div>
+        </form>
+    </div>
+</div>
